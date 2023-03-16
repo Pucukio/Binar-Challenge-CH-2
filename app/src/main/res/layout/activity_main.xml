@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="15dp">
+
+    <EditText
+        android:id="@+id/idTextCostOfService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Cost of Service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/idTextService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How was the service?"
+        app:layout_constraintStart_toStartOf="@id/idTextCostOfService"
+        app:layout_constraintTop_toBottomOf="@id/idTextCostOfService"/>
+    <RadioGroup
+        android:id="@+id/idRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/idTextService"
+        app:layout_constraintTop_toBottomOf="@id/idTextService">
+        <RadioButton
+            android:id="@+id/idButtonAmazing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Amazing (20%)"/>
+        <RadioButton
+            android:id="@+id/idButtonGood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good (18%)"/>
+        <RadioButton
+            android:id="@+id/idOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK (15%)"/>
+    </RadioGroup>
+        <TextView
+            android:id="@+id/idCountUpTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rount up tip?"
+            app:layout_constraintStart_toStartOf="@id/idRadioGroup"
+            app:layout_constraintTop_toBottomOf="@id/idRadioGroup"/>
+        <Switch
+            android:id="@+id/idSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/idRadioGroup"/>
+    <Button
+        android:id="@+id/idButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CALCULATE"
+        android:background="@drawable/colorbutton"
+        app:layout_constraintTop_toBottomOf="@id/idSwitch"
+        app:layout_constraintEnd_toEndOf="@id/idSwitch"/>
+    <TextView
+        android:id="@+id/idTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tip Amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idButton"/>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/baseline_add_reaction_24"
+        app:layout_constraintTop_toBottomOf="@id/idTipAmount"
+        android:background="@drawable/colorbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
